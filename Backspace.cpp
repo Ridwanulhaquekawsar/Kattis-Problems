@@ -6,16 +6,10 @@ void solve(){
     cin>>s;
     
     for(auto &c : s){
-        if(stk.empty() && c!='>'){
-            stk.push(c);
-        }
+        if(stk.empty() && c!='>') stk.push(c);
         else{
-            if(c=='<' && !stk.empty()){
-                stk.pop();
-            }
-            else{
-                stk.push(c);
-            }
+            if(c=='<' && !stk.empty()) stk.pop();
+            else stk.push(c);
         }
     }
     
